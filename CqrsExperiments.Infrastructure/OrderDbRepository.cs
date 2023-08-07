@@ -8,7 +8,15 @@ namespace CqrsExperiments.Infrastructure
     {
         static List<Order> orders = new List<Order>();
 
-        public Order[] List() => orders.ToArray();
+        public Order[] List(string? filter) 
+            => orders
+            .Where(e =>
+                filter == null 
+                || e.CustomerEmail.Contains(filter)
+                || e.Number.Contains(filter)
+                || e.DeliveryAddress.Contains(filter)
+            )
+            .ToArray();
 
         public void Save(Order entity)
         {

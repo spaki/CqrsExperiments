@@ -13,7 +13,7 @@ namespace CqrsExperiments.Domain.Services
             this.orderDbRepository = orderDbRepository;
         }
 
-        public Order[] List() => orderDbRepository.List();
+        public Order[] List(string? filter) => orderDbRepository.List(filter);
 
         public void Save(Order entity) => orderDbRepository.Save(entity);
     }

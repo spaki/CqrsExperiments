@@ -5,6 +5,6 @@ namespace CqrsExperiments.Domain.Interfaces
     public interface IOrderService
     {
         void Save(Order entity);
-        Order[] List();
+        Order[] List(string? filter);
     }
 }

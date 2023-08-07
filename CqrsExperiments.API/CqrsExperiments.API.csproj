@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CqrsExperiments.Application\CqrsExperiments.Application.csproj" />
     <ProjectReference Include="..\CqrsExperiments.Domain\CqrsExperiments.Domain.csproj" />
     <ProjectReference Include="..\CqrsExperiments.Infrastructure\CqrsExperiments.Infrastructure.csproj" />
   </ItemGroup>
